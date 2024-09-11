@@ -1,59 +1,44 @@
-def add_task(task_name, status = "Incomplete"):
-    if [task_name, status]  in task_list:
-        print(f"That task is already in your to-do list and is currently {status}.")
-    else:
-        new_task = [task_name, status]
-        task_list.append(new_task)
+# Trying idea of adding the functions to a list and calling them that way. 
+# Looks like I may be able to do it but would require some re-writing of the code.
 
-def view_tasks():
-    for task in task_list:
-        print(f"{task[0]} is {task[1]}")
+# def add_task(task_name, status = "Incomplete"):
+#     if [task_name, status]  in task_list:
+#         print(f"That task is already in your to-do list and is currently {status}.")
+#     else:
+#         new_task = [task_name, status]
+#         task_list.append(new_task)
 
-def complete_task(completed_task):
-    if [completed_task, "Incomplete"] in task_list:
-        task_list.remove([completed_task, "Incomplete"])
-        print(f"{completed_task} has been marked complete.")
-        finished_tasks.append(completed_task)
-        print(f"Finished tasks: {finished_tasks}")
+# def view_tasks():
+#     for task in task_list:
+#         print(f"{task[0]} is {task[1]}")
 
-def delete_task(task_to_delete):
-    try:
-        task_list.remove([task_to_delete, "Incomplete"])
-    except:
-        print(f"{task_to_delete} is not in your Todo list.")
-    else:
-        print(f"{task_to_delete} has been deleted from the Todo list.")
-    finally:
-        print("Returning to the menu.")
+# def complete_task(completed_task):
+#     if [completed_task, "Incomplete"] in task_list:
+#         task_list.remove([completed_task, "Incomplete"])
+#         print(f"{completed_task} has been marked complete.")
+#         finished_tasks.append(completed_task)
+#         print(f"Finished tasks: {finished_tasks}")
 
-def view_finished_tasks():
-    print("Here is your list of tasks you have completed:")
-    for task in finished_tasks:
-        print(f"{task}")
+# def delete_task(task_to_delete):
+#     try:
+#         task_list.remove([task_to_delete, "Incomplete"])
+#     except:
+#         print(f"{task_to_delete} is not in your Todo list.")
+#     else:
+#         print(f"{task_to_delete} has been deleted from the Todo list.")
+#     finally:
+#         print("Returning to the menu.")
 
-task_list = [["Water plants", "Incomplete"], ["Eating", "Incomplete"], ["Read a book", "Incomplete"]] #empty before finalizing
-finished_tasks = ["Shopping"]
-menu_action_list = [add_task, view_tasks]
+# def view_finished_tasks():
+#     print("Here is your list of tasks you have completed:")
+#     for task in finished_tasks:
+#         print(f"{task}")
 
-print("Welcome to the To-Do List App!\n")
-while True:
-    menu_action = int(input("Menu:\n1. Add a task\n2. View tasks\n3. Mark a task as complete\n4. Delete a task\n5. View completed tasks\n6. Quit\n"))
-    menu_action_list[menu_action-1]()
-    # if menu_action == "1":
-    #     task_name = input("Please input a name for the task: ").capitalize()
-    #     add_task(task_name)
-    # elif menu_action == "2":
-    #     view_tasks()
-    # elif menu_action == "3":
-    #     completed_task = input("Which task have you completed: ").capitalize()
-    #     complete_task(completed_task)
-    # elif menu_action == "4":
-    #     task_to_delete = input("Which task would you like to delete? Please type the name: ").capitalize()
-    #     delete_task(task_to_delete)
-    # elif menu_action == "5":
-    #     view_finished_tasks()
-    # elif menu_action == "6":
-    #     print("Thank you for using the To-Do List App! Have a great day!")
-    #     break
-    # else:
-    #     print("Invalid input. Please enter 1, 2, 3, 4, or 5 to make your selection.\n")
+# task_list = [["Water plants", "Incomplete"], ["Eating", "Incomplete"], ["Read a book", "Incomplete"]] #empty before finalizing
+# finished_tasks = ["Shopping"]
+# menu_action_list = [add_task, view_tasks]
+
+# print("Welcome to the To-Do List App!\n")
+# while True:
+#     menu_action = int(input("Menu:\n1. Add a task\n2. View tasks\n3. Mark a task as complete\n4. Delete a task\n5. View completed tasks\n6. Quit\n"))
+#     menu_action_list[menu_action-1]()
