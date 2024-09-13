@@ -44,6 +44,7 @@ print("Welcome to the To-Do List App!\n")
 
 while True:
     welcome = "Menu"
+    print(" ")
     print(welcome.center(20, "*"))   # Centers the menu with *'s on both sides. Improves readability while using the program.
     menu_action = input("\n1. Add a task\n2. View tasks\n3. Mark a task as complete\n4. Delete a task\n5. View completed tasks\n6. Quit\n")
     if menu_action == "1":
